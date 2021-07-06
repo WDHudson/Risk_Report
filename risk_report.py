@@ -15,8 +15,10 @@ generate_description_page(holdings[4:], pdf)
 
 # Page 4: Correlation Matrix with covariance table below it
 pdf.add_page()
+pdf.write(10, 'Correlation Matrix with Covariance Table')
 make_matrix()
-pdf.image("correl_matrix.png", 20, 40, 150, 120)
+pdf.image("images/correl_matrix.png", 20, 40, 150, 120)
+pdf.image('images/cov_table.png', 20, 180, 170, 85)
 
 # Page 5: Monte Carlo Simulation with VaR and CVaR
 

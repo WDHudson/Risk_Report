@@ -7,19 +7,20 @@ from pandas_datareader import data as pdr
 from holdings import stocks, weights
 import yfinance as yf
 
-# stocks = ['EGFIX', 'AKRIX', 'MBB', 'IEF', 'PSK', 'QQQ', 'QQQJ']
 # import data
+today = dt.datetime.today()
+endDate = dt.datetime.now()
+startDate = endDate - dt.timedelta(days=20*365)
 def get_data(stocks, start, end):
-    stockData = yf.download(stocks, start='2000-01-01', end='2021-06-29')
+    stockData = yf.download(stocks, start='2000-01-01', end=today)
     stockData = stockData['Adj Close']
     returns = stockData.pct_change()
     meanReturns = returns.mean()
     covMatrix = returns.cov()
+    print(covMatrix)
     return meanReturns, covMatrix
 
 
-endDate = dt.datetime.now()
-startDate = endDate - dt.timedelta(days=300)
 
 meanReturns, covMatrix = get_data(stocks, startDate, endDate)
 # print(covMatrix)
