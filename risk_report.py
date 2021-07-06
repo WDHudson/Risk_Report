@@ -1,12 +1,24 @@
 from holdings import stocks, generate_description_page, holdings
 from fpdf import FPDF
 from correl_matrix import make_matrix
+import datetime as dt
 
+today = str(dt.datetime.now().strftime('%Y-%m-%d'))
+print(today)
 pdf = FPDF('P')
+# Cover Page
+pdf.add_page()
+pdf.set_font('Arial', '', 35)
+pdf.cell(0, 50, txt= 'Artemis FP Risk Report', border=0, ln=0, align='C', fill=False, link='')
+pdf.cell(-200, 150, txt=today, border=0, ln=0, align='C', fill=False, link='')
+
 # Page 1: Description of each of the mutual funds
 pdf.add_page()
+pdf.set_font('Arial', '', 16)
+pdf.write(10, 'ETF Descriptions')
 generate_description_page(holdings[:4], pdf)
 pdf.add_page()
+pdf.write(10, 'ETF Descriptions')
 generate_description_page(holdings[4:], pdf)
 
 # Page 2: Pie Chart showing allocations

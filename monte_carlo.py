@@ -17,19 +17,11 @@ def get_data(stocks, start, end):
     returns = stockData.pct_change()
     meanReturns = returns.mean()
     covMatrix = returns.cov()
-    print(covMatrix)
+    # print(covMatrix)
     return meanReturns, covMatrix
 
 
-
 meanReturns, covMatrix = get_data(stocks, startDate, endDate)
-# print(covMatrix)
-
-# weights = np.random.random(len(meanReturns))
-# weights /= np.sum(weights)
-# print(weights)
-
-# Monte Carlo Method
 mc_sims = 10000 # number of simulations
 T = 253 #timeframe in days
 
