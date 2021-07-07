@@ -1,10 +1,10 @@
 from holdings import stocks, generate_description_page, holdings
 from fpdf import FPDF
 from correl_matrix import make_matrix
+from monte_carlo import run_monte_carlo
 import datetime as dt
 
 today = str(dt.datetime.now().strftime('%Y-%m-%d'))
-print(today)
 pdf = FPDF('P')
 # Cover Page
 pdf.add_page()
@@ -33,6 +33,10 @@ pdf.image("images/correl_matrix.png", 20, 40, 150, 120)
 pdf.image('images/cov_table.png', 20, 180, 170, 85)
 
 # Page 5: Monte Carlo Simulation with VaR and CVaR
+pdf.add_page()
+pdf.write(10, 'Monte Carlo Simulation (10,000 Simulations)')
+run_monte_carlo()
+pdf.image('images/monte_carlo.png', 20, 40, 160, 120)
 
 # Page 6: Historical Daily Returns going back 20 years
 

@@ -31,15 +31,6 @@ holdings = [
     'weight': 0.3768
   },
   {
-    'name': 'QQQJ',
-    'description': "The Invesco NASDAQ Next Gen 100 Fund (Fund) is based on the NASDAQ Next Generation 100 Index (Index). The Fund will invest at least 90 percent of its total assets in the securities that comprise the Index by investing in the 101st to the 200th largest companies on the NASDAQ. As a result, the portfolio may be concentrated in mid-capitalization stocks. The Index is comprised of securities of the next generation of Nasdaq-listed non-financial companies; that is, the largest 100 Nasdaq-listed companies outside of the NASDAQ-100 Index.",
-    'weight': 0.0515
-  },
-  # {
-  #   'name': 'RSP',
-  #   'weight': 0.0528
-  # },
-  {
     'name': 'PDO',
     'description': 'test',
     'description': "The PIMCO Dynamic Opportunities Fund utilizes an opportunistic approach to pursue high conviction income-generating ideas across both public and private credit markets to seek current income as a primary objective and capital appreciation as a secondary objective. In managing the fund, PIMCO employs a dynamic asset allocation strategy acorss multiple fixed income sectors based on, among other things, market conditions, valuation assessments, economic outlook, credit market trends, and other economic factors. With PIMCO;s macroeconomic analysis as the basis for top-down decisions, including geographic and credit sector emphasis, PIMCO manages the fund with a focus on seeking income generating investment ideas across multiple fixed income sectors, with an emphasis on seeking opportunities in developed and emerging global credit markets",
