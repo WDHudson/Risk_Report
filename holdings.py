@@ -21,7 +21,6 @@ holdings = [
   },
   {
     'name': 'PSK',
-    'description': 'test',
     'description': "The SPDR ICE Preferred Securities ETF seeks to provide investment results that, before fees and expenses, correspond generallt to the total return performance of the ICE Exchange-Listed Fixed & Adjustable Rate Preferred Securities Index.",
     'weight': 0.0731
   },
@@ -32,7 +31,6 @@ holdings = [
   },
   {
     'name': 'PDO',
-    'description': 'test',
     'description': "The PIMCO Dynamic Opportunities Fund utilizes an opportunistic approach to pursue high conviction income-generating ideas across both public and private credit markets to seek current income as a primary objective and capital appreciation as a secondary objective. In managing the fund, PIMCO employs a dynamic asset allocation strategy acorss multiple fixed income sectors based on, among other things, market conditions, valuation assessments, economic outlook, credit market trends, and other economic factors. With PIMCO;s macroeconomic analysis as the basis for top-down decisions, including geographic and credit sector emphasis, PIMCO manages the fund with a focus on seeking income generating investment ideas across multiple fixed income sectors, with an emphasis on seeking opportunities in developed and emerging global credit markets",
     'weight': 0.0341
   }

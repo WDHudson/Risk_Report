@@ -23,7 +23,7 @@ generate_description_page(holdings[4:], pdf)
 
 # Page 2: Pie Chart showing allocations
 
-# Page 3: Asset Class allocation
+# Page 3: Daily Return Graphs for Each Holding
 
 # Page 4: Correlation Matrix with covariance table below it
 pdf.add_page()

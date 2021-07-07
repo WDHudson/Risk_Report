@@ -6,6 +6,7 @@ import datetime as dt
 from pandas_datareader import data as pdr
 from holdings import stocks, weights
 import yfinance as yf
+import dataframe_image as dfi
 
 def run_monte_carlo():
     # import data
@@ -45,7 +46,6 @@ def run_monte_carlo():
     plt.ylabel('Portfolio Value ($)')
     plt.xlabel('Days')
     plt.title('Monte Carlo simulation of ETF portfolio')
-    # plt.show()
     plt.savefig('images/monte_carlo.png', dpi=fig.dpi, bbox_inches="tight")
 
     def mcVaR(returns, alpha=5):
@@ -72,5 +72,9 @@ def run_monte_carlo():
     VaR = initialPortfolio - mcVaR(portResults, alpha=5)
     CVaR = initialPortfolio - mcCVaR(portResults, alpha=5)
 
-    print('VaR with 95 percent confidence interval: ${}'.format(round(VaR,2)))
-    print('CVaR with 95 percent confidence interval: ${}'.format(round(CVaR,2)))
+    data = [['VaR with 95 percent confidence:', '${}'.format(round(VaR,2))], ['CVaR with 95 percent confidence:', '${}'.format(round(CVaR,2))]]
+    df = pd.DataFrame(data, columns = ['', ''])
+    # Removes index column
+    print(df)
+    dfi.export(df, 'images/conf_interval_table.png', table_conversion='matplotlib')
+
