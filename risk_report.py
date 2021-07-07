@@ -34,9 +34,10 @@ pdf.image('images/cov_table.png', 20, 180, 170, 85)
 
 # Page 5: Monte Carlo Simulation with VaR and CVaR
 pdf.add_page()
-pdf.write(10, 'Monte Carlo Simulation (10,000 Simulations)')
+pdf.write(10, 'Monte Carlo Simulation (10,000 Simulations) w/ Var, CVaR Analysis')
 run_monte_carlo()
 pdf.image('images/monte_carlo.png', 20, 40, 160, 120)
+pdf.image('images/conf_interval_table.png', 20, 180, 170, 40)
 
 # Page 6: Historical Daily Returns going back 20 years
 

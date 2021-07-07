@@ -75,6 +75,4 @@ def run_monte_carlo():
     data = [['VaR with 95 percent confidence:', '${}'.format(round(VaR,2))], ['CVaR with 95 percent confidence:', '${}'.format(round(CVaR,2))]]
     df = pd.DataFrame(data, columns = ['', ''])
     # Removes index column
-    print(df)
     dfi.export(df, 'images/conf_interval_table.png', table_conversion='matplotlib')
-
